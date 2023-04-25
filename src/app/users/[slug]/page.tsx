@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Repos } from '~/components/Repos'
 
 interface UserProps {
   params: {
@@ -26,6 +27,9 @@ export default async function User({ params }: UserProps) {
       <h1>Usuário: {params.slug}</h1>
       <p>Info from Github API</p>
       <pre>{JSON.stringify(data, null, 2)}</pre>
+
+      {/* @ts-expect-error Async Server Component */}
+      <Repos owner={params.slug} />
     </div>
   )
 }

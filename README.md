@@ -13,3 +13,4 @@ For this studies I followed this [video](https://www.youtube.com/watch?v=0zl72th
     ```
   - To revalidate whole the page we can export a variable outside the default function called `revalidate`.
   - We also can revalidate and handle cache to a specific fetch usign the default fetch of the browser, that [has been extended](https://nextjs.org/blog/next-13#data-fetching).
+- Server side components: The new components can be executed on server-side! We just need transform the function to async like pages
