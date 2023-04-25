@@ -5,6 +5,8 @@ export default function Home() {
     <div>
       <h1>Hello World</h1>
       <Link href="/dashboard">Go to dashboard</Link>
+      <br />
+      <Link href="/login">Go to login</Link>
     </div>
   )
 }
