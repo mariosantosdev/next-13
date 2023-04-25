@@ -13,10 +13,19 @@ export async function generateMetadata({
   return { title: `Usuário - ${params.slug}` }
 }
 
-export default function User({ params }: UserProps) {
+export default async function User({ params }: UserProps) {
+  const response = await fetch(`https://api.github.com/users/${params.slug}`, {
+    next: {
+      revalidate: 60, // 60 seconds
+    },
+  })
+  const data = await response.json()
+
   return (
     <div>
       <h1>Usuário: {params.slug}</h1>
+      <p>Info from Github API</p>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
     </div>
   )
 }
