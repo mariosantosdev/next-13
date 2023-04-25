@@ -4,3 +4,4 @@ For this studies I followed this [video](https://www.youtube.com/watch?v=0zl72th
 ## Anotations
 - To create new pages to the application now all files inside the folder app that contains "page" will be transformed in pages
 - The layouts allow we create wrappers to pages inside in determinate scope (folder). If we don't wanna that folder affect our route, we could create the folder with brackets like: `(auth)` and the routes will be `/login` instead `/auth/login`
+- We can continue using dynamic routes and in next 13.2 introduces the [Metadata API](https://nextjs.org/blog/next-13-2#built-in-seo-support-with-new-metadata-api) to improvement SEO
